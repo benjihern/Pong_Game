@@ -24,10 +24,10 @@
 
 This project implements a classic Pong game on the AMD Urbana development board with added audio feedback using PWM and CDMA. It integrates video output, paddle control, score display, and synchronized sound playback through a custom AXI-based PWM audio driver.
 
-# Game Sequence
+### Game Sequence
 At startup or after a manual reset, the system initializes and plays an introductory song ("Mary Had a Little Lamb"). Once the song finishes, the Pong game begins and continues until a player reaches 9 points. When a player wins, both scores reset to 0, and the game restarts immediately without replaying the introduction. Pressing the reset button at any time will clear the scores and restart the full sequence, including the song.
 
-For more information, please refer to the [full project report]() included in this repository.
+For more information, please refer to the [full project report](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/c0313477305d65088de05a5924eaefff221a035d/final_project_report.pdf) included in this repository.
 
 <!-- TASK-1 -->
 ## Task-1
