@@ -39,7 +39,7 @@ In this task, we generate 8-bit audio tables corresponding to different game eve
 
 Each sound is exported in three different formats, each serving a different purpose in later tasks:
 - **WAV File**: A standard playable audio file, useful for debugging and verifying sound playback through media players.
-- **Header File**: A C-style array to be used in Task #3. These are integrated into MicroBlaze software for direct playback.
+- **Header File**: A C-style array to be used in Task #3 and Task #4. These are integrated into MicroBlaze software for direct playback.
 
 ### IMPORTANT FILES
 The main scripts are the following:
