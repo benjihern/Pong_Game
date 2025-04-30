@@ -5,20 +5,20 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#task:1">Task:1</a>
+      <a href="#task-1">Task-1</a>
     </li>
-    <li><a href="#task:2">Task:2</a></li>
+    <li><a href="#task-2">Task-2</a></li>
     </li>
-    <li><a href="#task:3">Task:3</a></li>
+    <li><a href="#task-3">Task-3</a></li>
     </li>
-    <li><a href="#task:4">Task:4</a></li>
+    <li><a href="#task-4">Task-4</a></li>
     </li>
     <li><a href="#authors">Authors</a></li>
   </ol>
 </details>
 
-<!-- TASK:1 -->
-## Task:1
+<!-- TASK-1 -->
+## Task-1
 
 In this task, we generate 8-bit audio tables corresponding to different game events in the Pong game. These audio cues enhance the gameplay experience by associating specific sounds with in-game actions:
 - When the player wins or loses, the game plays “Mary Had a Little Lamb”, inspired by the reference link in the Resources section.
@@ -34,8 +34,8 @@ The main scripts are the following:
 - [audio_generation.cpp](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification_code/audio_verification_code/audio_verification_code.cpp) – Generates all audio tones in all three formats (.wav, .h, .mem)
 - [audio_verification.ipynb](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification.ipynb) – Compares the generated audio files using time-domain and frequency-domain analysis to ensure correctness across formats
 
-<!-- TASK:2 -->
-## Task:2
+<!-- TASK-2 -->
+## Task-2
 
 In this task, we generate 8-bit audio tables corresponding to different game events in the Pong game. These audio cues enhance the gameplay experience by associating specific sounds with in-game actions:
 - When the player wins or loses, the game plays “Mary Had a Little Lamb”, inspired by the reference link in the Resources section.
@@ -51,8 +51,8 @@ The main scripts are the following:
 - [audio_generation.cpp](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification_code/audio_verification_code/audio_verification_code.cpp) – Generates all audio tones in all three formats (.wav, .h, .mem)
 - [audio_verification.ipynb](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification.ipynb) – Compares the generated audio files using time-domain and frequency-domain analysis to ensure correctness across formats
 
-<!-- TASK:3 -->
-## Task:3
+<!-- TASK-3 -->
+## Task-3
 
 In this task, we generate 8-bit audio tables corresponding to different game events in the Pong game. These audio cues enhance the gameplay experience by associating specific sounds with in-game actions:
 - When the player wins or loses, the game plays “Mary Had a Little Lamb”, inspired by the reference link in the Resources section.
@@ -69,8 +69,8 @@ The main scripts are the following:
 - [audio_verification.ipynb](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification.ipynb) – Compares the generated audio files using time-domain and frequency-domain analysis to ensure correctness across formats
 
 
-<!-- TASK:4 -->
-## Task:4
+<!-- TASK-4 -->
+## Task-4
 
 In this section, you will find the media files along with the verification plots we generated to ensure all sound files were correctly produced across formats.
 
