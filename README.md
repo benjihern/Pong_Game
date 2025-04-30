@@ -5,15 +5,20 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-task">About The Task</a>
+    <li><a href="#task:1">About The Task</a>
     </li>
-    <li><a href="#results">Results</a></li>
+    <li><a href="#task:2">Results</a></li>
+    </li>
+    <li><a href="#task:3">Results</a></li>
+    </li>
+    <li><a href="#task:4">Results</a></li>
+    </li>
     <li><a href="#authors">Authors</a></li>
   </ol>
 </details>
 
-<!-- ABOUT THE TASK -->
-## About The Task
+<!-- TASK:1 -->
+## Task:1
 
 In this task, we generate 8-bit audio tables corresponding to different game events in the Pong game. These audio cues enhance the gameplay experience by associating specific sounds with in-game actions:
 - When the player wins or loses, the game plays “Mary Had a Little Lamb”, inspired by the reference link in the Resources section.
@@ -29,8 +34,43 @@ The main scripts are the following:
 - [audio_generation.cpp](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification_code/audio_verification_code/audio_verification_code.cpp) – Generates all audio tones in all three formats (.wav, .h, .mem)
 - [audio_verification.ipynb](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification.ipynb) – Compares the generated audio files using time-domain and frequency-domain analysis to ensure correctness across formats
 
-<!-- RESULTS -->
-## Results
+<!-- TASK:2 -->
+## Task:2
+
+In this task, we generate 8-bit audio tables corresponding to different game events in the Pong game. These audio cues enhance the gameplay experience by associating specific sounds with in-game actions:
+- When the player wins or loses, the game plays “Mary Had a Little Lamb”, inspired by the reference link in the Resources section.
+- When the ball hits a paddle, a single 0.25-second tone is played.
+- When a point is scored, another 0.25-second tone is played — distinct from the paddle hit tone.
+
+Each sound is exported in three different formats, each serving a different purpose in later tasks:
+- **WAV File**: A standard playable audio file, useful for debugging and verifying sound playback through media players.
+- **Header File**: A C-style array to be used in Task #3. These are integrated into MicroBlaze software for direct playback via PWM_REG.
+- **Memory File**: A hexadecimal memory initialization file for Task #4, used for BRAM preload or DMA transfer in Vivado.
+
+The main scripts are the following:
+- [audio_generation.cpp](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification_code/audio_verification_code/audio_verification_code.cpp) – Generates all audio tones in all three formats (.wav, .h, .mem)
+- [audio_verification.ipynb](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification.ipynb) – Compares the generated audio files using time-domain and frequency-domain analysis to ensure correctness across formats
+
+<!-- TASK:3 -->
+## Task:3
+
+In this task, we generate 8-bit audio tables corresponding to different game events in the Pong game. These audio cues enhance the gameplay experience by associating specific sounds with in-game actions:
+- When the player wins or loses, the game plays “Mary Had a Little Lamb”, inspired by the reference link in the Resources section.
+- When the ball hits a paddle, a single 0.25-second tone is played.
+- When a point is scored, another 0.25-second tone is played — distinct from the paddle hit tone.
+
+Each sound is exported in three different formats, each serving a different purpose in later tasks:
+- **WAV File**: A standard playable audio file, useful for debugging and verifying sound playback through media players.
+- **Header File**: A C-style array to be used in Task #3. These are integrated into MicroBlaze software for direct playback via PWM_REG.
+- **Memory File**: A hexadecimal memory initialization file for Task #4, used for BRAM preload or DMA transfer in Vivado.
+
+The main scripts are the following:
+- [audio_generation.cpp](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification_code/audio_verification_code/audio_verification_code.cpp) – Generates all audio tones in all three formats (.wav, .h, .mem)
+- [audio_verification.ipynb](https://github.com/kjgnapp/Soc_FinalProject/blob/de52a04431b77664545a674f94bd86f3a979fe75/task_1/audio_verification.ipynb) – Compares the generated audio files using time-domain and frequency-domain analysis to ensure correctness across formats
+
+
+<!-- TASK:4 -->
+## Task:4
 
 In this section, you will find the media files along with the verification plots we generated to ensure all sound files were correctly produced across formats.
 
