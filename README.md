@@ -5,13 +5,13 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#task:1">About The Task</a>
+      <a href="#task:1">Task:1</a>
     </li>
-    <li><a href="#task:2">Results</a></li>
+    <li><a href="#task:2">Task:2</a></li>
     </li>
-    <li><a href="#task:3">Results</a></li>
+    <li><a href="#task:3">Task:3</a></li>
     </li>
-    <li><a href="#task:4">Results</a></li>
+    <li><a href="#task:4">Task:4</a></li>
     </li>
     <li><a href="#authors">Authors</a></li>
   </ol>
