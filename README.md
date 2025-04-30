@@ -55,17 +55,32 @@ The audio tables are the following:
 
 <!-- TASK-2 -->
 ## Task-2
+
+In this task, we implemented PWM-based audio generation using the AXI Timer IP. This IP was configured to produce a variable-duty-cycle signal that modulates an 8-bit audio waveform and outputs it through the Urbana board's 3.5mm audio jack. Key challenges included signal degradation when driving the buzzer directly from the FPGA, which was solved using a simple BJT-based buffer circuit.
+
+### What We Achieved:
+- Configured the AXI Timer IP registers (TCSR, TLR, TCR) to create accurate PWM signals.
+- Enabled audio feedback playback by routing the PWM output to a buzzer.
+- Verified audio generation using both on-board LEDs and serial UART debug output.
+
 The project files for this task are the following:
 - [vivado and vitis projects](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/vivado_vitis_task_2)
 
 <!-- TASK-3 -->
 ## Task-3
 
-The project files for this task are the following: 
+In this task, we integrated the Pong game logic with audio feedback to enhance gameplay using event-based sound cues. These cues include paddle hits, point scoring, and winning sounds—all synchronized with in-game logic. We also redesigned the game FSM to ensure clean round transitions and added 7-segment score displays for improved UX.
+
+### What We Achieved:
+- Refactored game FSM to support precise audio triggering.
+- Integrated PWM audio playback directly into Pong events.
+- Resolved hardware issues with a custom audio driver circuit for reliable buzzer output.
+- Extended the game design with score displays and UART debug messages.
+
+The project files for this task are the following:
 - [vivado project](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/task_3_vivado)
 - [vitis project](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cd2dbd6722e09458dce4d0b181f753d4b59a9aa8/task_3_vitis.zip)
-
-[Videos showing the implementation](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/task3_videos)
+- [**Videos showing the implementation**](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/task3_videos)
 
 <!-- TASK-4 -->
 ## Task-4
