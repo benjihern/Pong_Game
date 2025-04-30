@@ -105,3 +105,5 @@ The project files for this task are the following:
 
 - Alex J. Santiago Rodriguez - santiagorod.alex@ufl.edu
 - Xianghui Xie - Xianghui.xie@ufl.edu
+- Kurtis J. Gnapp - kurtisgnapp@ufl.edu
+- Benjamin Hernandez - bhernandez2@ufl.edu
