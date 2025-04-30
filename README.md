@@ -77,6 +77,18 @@ In this task, we integrated the Pong game logic with audio feedback to enhance g
 - Resolved hardware issues with a custom audio driver circuit for reliable buzzer output.
 - Extended the game design with score displays and UART debug messages.
 
+### Architecture Overview
+The figure below shows the Vivado block diagram used in this project. It highlights the updated architecture integrating:
+- MicroBlaze soft processor
+- AXI Timer for PWM-based audio output (Task #2)
+- AXI GPIO and UART for paddle and debug control
+- Task #3 additions such as score tracking and sound synchronization logic
+
+<p align="center">
+  <img src="https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/57c73099a9e0b4ae072a84bcc8d5a350384f2c58/diagrams/block_diagram_task3.png"?raw=true" alt="Sublime's custom image"/>
+  Figure: Vivado block diagram illustrating the complete system integration for the Pong game. The architecture reflects contributions from both Task #2 and Task #3.
+</p>
+
 The project files for this task are the following:
 - [vivado project](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/task_3_vivado)
 - [vitis project](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cd2dbd6722e09458dce4d0b181f753d4b59a9aa8/task_3_vitis.zip)
