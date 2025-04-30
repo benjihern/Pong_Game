@@ -1,4 +1,4 @@
-<h1 align="center">Task #1: 8-bit Audio Tables Generation</h1>
+<h1 align="center">SoC Design Final Project</h1>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
