@@ -1,0 +1,5 @@
+﻿  audio_verification_code.cpp
+C:\Users\alexj\Desktop\Grad_school\Spring_2025\EEL5934_soc_design\final_project\task_1\audio_verification_code\audio_verification_code\audio_verification_code.cpp(31,21): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\alexj\Desktop\Grad_school\Spring_2025\EEL5934_soc_design\final_project\task_1\audio_verification_code\audio_verification_code\audio_verification_code.cpp(52,37): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data
+C:\Users\alexj\Desktop\Grad_school\Spring_2025\EEL5934_soc_design\final_project\task_1\audio_verification_code\audio_verification_code\audio_verification_code.cpp(53,26): warning C4267: '=': conversion from 'size_t' to 'int32_t', possible loss of data
+  audio_verification_code.vcxproj -> C:\Users\alexj\Desktop\Grad_school\Spring_2025\EEL5934_soc_design\final_project\task_1\audio_verification_code\x64\Debug\audio_verification_code.exe
