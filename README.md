@@ -43,7 +43,7 @@ Each sound is exported in three different formats, each serving a different purp
 
 ### IMPORTANT FILES
 The main scripts are the following:
-- [audio_generation.cpp](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification_code/audio_verification_code/audio_verification_code.cpp) – Generates all audio tones in all three formats (.wav, .h, .mem)
+- [audio_generation.cpp](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification_code/audio_verification_code/audio_verification_code.cpp) – Generates all audio tones in all three formats (.wav, .h)
 - [audio_verification.ipynb](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification.ipynb) – Compares the generated audio files using time-domain and frequency-domain analysis to ensure correctness across formats
 
 The audio tables are the following:
