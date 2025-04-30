@@ -27,7 +27,7 @@ In this task, we generate 8-bit audio tables corresponding to different game eve
 
 Each sound is exported in three different formats, each serving a different purpose in later tasks:
 - **WAV File**: A standard playable audio file, useful for debugging and verifying sound playback through media players.
-- **Header File**: A C-style array to be used in Task #3. These are integrated into MicroBlaze software for direct playback via PWM_REG.
+- **Header File**: A C-style array to be used in Task #3. These are integrated into MicroBlaze software for direct playback.
 
 The main scripts are the following:
 - [audio_generation.cpp](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification_code/audio_verification_code/audio_verification_code.cpp) – Generates all audio tones in all three formats (.wav, .h, .mem)
