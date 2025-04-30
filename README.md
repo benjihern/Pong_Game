@@ -116,6 +116,11 @@ This approach meets the project’s requirement of using CDMA to drive audio pla
 
 - System satisfies Task-4’s DMA-based audio requirement
 
+<p align="center">
+  <img src="https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/28da4dc464941bbf3153cd4e9dbedd2544061c37/diagrams/task4_diagram.png"?raw=true" alt="Sublime's custom image"/>
+  Figure 2: Vivado block diagram illustrating the complete system integration for the Pong game. The architecture reflects contributions from Task #4.
+</p>
+
 ### IMPORTANT FILES
 The project files for this task are the following:
 <!-- Authors -->
