@@ -51,7 +51,7 @@ The project files for this task are the following:
 
 The project files for this task are the following: 
 - [vivado project](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/task_3_vivado)
-- [vitis project]()
+- [vitis project](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cd2dbd6722e09458dce4d0b181f753d4b59a9aa8/task_3_vitis.zip)
 
 <!-- TASK-4 -->
 ## Task-4
