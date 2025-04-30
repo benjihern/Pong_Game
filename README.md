@@ -5,7 +5,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-    <li><a href="#task:1">About The Task</a>
+      <a href="#task:1">About The Task</a>
     </li>
     <li><a href="#task:2">Results</a></li>
     </li>
