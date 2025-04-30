@@ -108,13 +108,13 @@ This approach meets the project’s requirement of using CDMA to drive audio pla
 
 ### What We Achieved:
 
-AXI CDMA transfers audio samples from BRAM to buffer
+- AXI CDMA transfers audio samples from BRAM to buffer
 
-CPU writes PWM values to the AXI Timer after each transfer
+- CPU writes PWM values to the AXI Timer after each transfer
 
-Playback is rate-limited to ~8kHz for smooth sound
+- Playback is rate-limited to ~8kHz for smooth sound
 
-System satisfies Task-4’s DMA-based audio requirement
+- System satisfies Task-4’s DMA-based audio requirement
 
 ### IMPORTANT FILES
 The project files for this task are the following:
