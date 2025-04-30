@@ -88,7 +88,7 @@ The figure below shows the Vivado block diagram used in this project. It highlig
 
 <p align="center">
   <img src="https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/57c73099a9e0b4ae072a84bcc8d5a350384f2c58/diagrams/block_diagram_task3.png"?raw=true" alt="Sublime's custom image"/>
-  Figure: Vivado block diagram illustrating the complete system integration for the Pong game. The architecture reflects contributions from both Task #2 and Task #3.
+  Figure 1: Vivado block diagram illustrating the complete system integration for the Pong game. The architecture reflects contributions from both Task #2 and Task #3.
 </p>
 
 ### IMPORTANT FILES
