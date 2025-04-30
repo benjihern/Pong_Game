@@ -5,7 +5,9 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#task-1">Task-1</a>
+      <a href="#about the project">About the Project</a>
+    </li>
+    <li><a href="#task-1">Task-2</a></li>
     </li>
     <li><a href="#task-2">Task-2</a></li>
     </li>
@@ -16,6 +18,9 @@
     <li><a href="#authors">Authors</a></li>
   </ol>
 </details>
+
+<!-- ABOUT THE PROJECT -->
+## About the Project
 
 <!-- TASK-1 -->
 ## Task-1
@@ -53,11 +58,13 @@ The project files for this task are the following:
 - [vivado project](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/task_3_vivado)
 - [vitis project](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cd2dbd6722e09458dce4d0b181f753d4b59a9aa8/task_3_vitis.zip)
 
+[Videos showing the implementation](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/task3_videos)
+
 <!-- TASK-4 -->
 ## Task-4
 
 <!-- Authors -->
 ## Authors
 
-- Xianghui Xie - Xianghui.xie@ufl.edu
 - Alex J. Santiago Rodriguez - santiagorod.alex@ufl.edu
+- Xianghui Xie - Xianghui.xie@ufl.edu
