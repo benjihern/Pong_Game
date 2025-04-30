@@ -43,9 +43,15 @@ The audio tables are the following:
 
 <!-- TASK-2 -->
 ## Task-2
+The project files for this task are the following:
+- [vivado and vitis projects]()
 
 <!-- TASK-3 -->
 ## Task-3
+
+The project files for this task are the following: 
+- [vivado project](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/task_3_vivado)
+- [vitis project]()
 
 <!-- TASK-4 -->
 ## Task-4
