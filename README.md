@@ -100,6 +100,24 @@ The project files for this task are the following:
 <!-- TASK-4 -->
 ## Task-4
 
+In Task-4, we enhanced the audio system by integrating the AXI CDMA to transfer PWM parameters—period and duty cycle—from BRAM to a buffer location. This allowed us to offload repetitive data movement from the MicroBlaze processor while still controlling the AXI Timer for PWM audio output.
+
+Since direct CDMA-to-Timer transfers are not supported, we used an indirect method: the CPU reads the CDMA-transferred values from BRAM and writes them to the AXI Timer registers. To match the required 8kHz audio playback rate, we introduced a timed delay (usleep()), preventing the CDMA from updating too quickly and ensuring clean audio output.
+
+This approach meets the project’s requirement of using CDMA to drive audio playback and maintains full Pong game functionality.
+
+### What We Achieved:
+
+AXI CDMA transfers audio samples from BRAM to buffer
+
+CPU writes PWM values to the AXI Timer after each transfer
+
+Playback is rate-limited to ~8kHz for smooth sound
+
+System satisfies Task-4’s DMA-based audio requirement
+
+### IMPORTANT FILES
+The project files for this task are the following:
 <!-- Authors -->
 ## Authors
 
