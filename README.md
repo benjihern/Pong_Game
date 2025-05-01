@@ -1,24 +1,5 @@
 <h1 align="center">SoC Design Final Project</h1>
 
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about the project">About the Project</a>
-    </li>
-    <li><a href="#task-1">Task-1</a></li>
-    </li>
-    <li><a href="#task-2">Task-2</a></li>
-    </li>
-    <li><a href="#task-3">Task-3</a></li>
-    </li>
-    <li><a href="#task-4">Task-4</a></li>
-    </li>
-    <li><a href="#authors">Authors</a></li>
-  </ol>
-</details>
-
 <!-- ABOUT THE PROJECT -->
 ## About the Project
 
@@ -26,8 +7,6 @@ This project implements a classic Pong game on the AMD Urbana development board 
 
 ### Game Sequence
 At startup or after a manual reset, the system initializes and plays an introductory song ("Mary Had a Little Lamb"). Once the song finishes, the Pong game begins and continues until a player reaches 9 points. When a player wins, both scores reset to 0, and the game restarts immediately without replaying the introduction. Pressing the reset button at any time will clear the scores and restart the full sequence, including the song.
-
-For more information, please refer to the [full project report](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/c0313477305d65088de05a5924eaefff221a035d/final_project_report.pdf) included in this repository.
 
 <!-- TASK-1 -->
 ## Task-1
@@ -41,19 +20,6 @@ Each sound is exported in three different formats, each serving a different purp
 - **WAV File**: A standard playable audio file, useful for debugging and verifying sound playback through media players.
 - **Header File**: A C-style array to be used in Task #3 and Task #4. These are integrated into MicroBlaze software for direct playback.
 
-### IMPORTANT FILES
-The main scripts are the following:
-- [audio_generation.cpp](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification_code/audio_verification_code/audio_verification_code.cpp) – Generates all audio tones in all three formats (.wav, .h)
-- [audio_verification.ipynb](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification.ipynb) – Compares the generated audio files using time-domain and frequency-domain analysis to ensure correctness across formats
-
-The audio tables are the following:
-- [Mary Had a Little Lamb Header File](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification_code/audio_verification_code/mary_lamb.h)
-- [Mary Had a Little Lamb WAV File](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification_code/audio_verification_code/mary_lamb.wav)
-- [Paddle Hit Header File](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification_code/audio_verification_code/paddle_hit.h)
-- [Paddle Hit WAV File](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification_code/audio_verification_code/paddle_hit.wav)
-- [Point Scored Header File](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification_code/audio_verification_code/point_scored.h)
-- [Point Scored WAV File](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cc33be6c29f642d8714d849ba5b56c01039a264e/task_1/audio_verification_code/audio_verification_code/point_scored.wav)
-
 <!-- TASK-2 -->
 ## Task-2
 
@@ -63,10 +29,6 @@ In this task, we implemented PWM-based audio generation using the AXI Timer IP. 
 - Configured the AXI Timer IP registers (TCSR, TLR, TCR) to create accurate PWM signals.
 - Enabled audio feedback playback by routing the PWM output to a buzzer.
 - Verified audio generation using both on-board LEDs and serial UART debug output.
-
-### IMPORTANT FILES
-The project files for this task are the following:
-- [vivado and vitis projects](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/vivado_vitis_task_2)
 
 <!-- TASK-3 -->
 ## Task-3
@@ -90,12 +52,6 @@ The figure below shows the Vivado block diagram used in this project. It highlig
   <img src="https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/57c73099a9e0b4ae072a84bcc8d5a350384f2c58/diagrams/block_diagram_task3.png"?raw=true" alt="Sublime's custom image"/>
   Figure 1: Vivado block diagram illustrating the complete system integration for the Pong game. The architecture reflects contributions from both Task #2 and Task #3.
 </p>
-
-### IMPORTANT FILES
-The project files for this task are the following:
-- [vivado project](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/task_3_vivado)
-- [vitis project](https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/cd2dbd6722e09458dce4d0b181f753d4b59a9aa8/task_3_vitis.zip)
-- [**Videos showing the implementation**](https://github.com/smartsystemslab-uf/final-project-alexillo1/releases/tag/task3_videos)
 
 <!-- TASK-4 -->
 ## Task-4
@@ -121,12 +77,4 @@ This approach meets the project’s requirement of using CDMA to drive audio pla
   Figure 2: Vivado block diagram illustrating the complete system integration for the Pong game. The architecture reflects contributions from Task #4.
 </p>
 
-### IMPORTANT FILES
-The project files for this task are the following:
-<!-- Authors -->
-## Authors
 
-- Alex J. Santiago Rodriguez - santiagorod.alex@ufl.edu
-- Xianghui Xie - Xianghui.xie@ufl.edu
-- Kurtis J. Gnapp - kurtisgnapp@ufl.edu
-- Benjamin Hernandez - bhernandez2@ufl.edu
