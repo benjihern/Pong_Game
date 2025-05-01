@@ -5,7 +5,7 @@ This project implements a real-time Pong game on an AMD Urbana development board
 
 <img width="569" alt="image" src="https://github.com/user-attachments/assets/52cdcd7a-2a2f-4e82-9325-62dca4ddf8eb" />
 
-Figure : AMD Urbana development board layout, highlighting the key interfaces used in the project 
+*Figure: AMD Urbana development board layout, highlighting the key interfaces used in the project*
 
 ## Features
 - Real-time Pong gameplay with paddle control, score display, and automatic game resets
@@ -28,7 +28,7 @@ The following system architecture was implemented in Vivado using a block design
 
 <img width="572" alt="image" src="https://github.com/user-attachments/assets/68779b30-d4af-4d7d-952d-1a241eb9918c" />
 
-Figure: Vivado block diagram highlighting full system integration
+*Figure: Vivado block diagram highlighting full system integration*
 
 ## Audio System Design
 ### Audio Sample Format
@@ -48,7 +48,7 @@ Due to current limitations of the buzzer circuit, a BJT-based amplifier was adde
 
 <img width="556" alt="image" src="https://github.com/user-attachments/assets/fd69f2dc-6886-4077-a284-8b8720fa2856" />
 
-Figure: External BJT driver circuit for audio playback
+*Figure: External BJT driver circuit for audio playback*
 
 ## Key Implementation Highlights
 - **PWM Audio via AXI Timer**
