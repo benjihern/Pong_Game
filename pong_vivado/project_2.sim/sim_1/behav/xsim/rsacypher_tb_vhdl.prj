@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_2.srcs/sources_1/imports/Downloads/P2_axi_urbana2_S2025/P2_axi_urbana2_S2025/vhdl/modmult.vhd" \
+"../../../../project_2.srcs/sources_1/imports/Downloads/P2_axi_urbana2_S2025/P2_axi_urbana2_S2025/vhdl/rsacypher.vhd" \
+
+# Do not sort compile order
+nosort

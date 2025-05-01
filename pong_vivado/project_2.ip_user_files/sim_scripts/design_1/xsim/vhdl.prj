@@ -1,0 +1,46 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_1/ip/design_1_microblaze_riscv_0_0/sim/design_1_microblaze_riscv_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_dlmb_v10_0/sim/design_1_dlmb_v10_0.vhd" \
+"../../../bd/design_1/ip/design_1_ilmb_v10_0/sim/design_1_ilmb_v10_0.vhd" \
+"../../../bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/sim/design_1_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/sim/design_1_ilmb_bram_if_cntlr_0.vhd" \
+"../../../bd/design_1/ip/design_1_mdm_1_0/sim/design_1_mdm_1_0.vhd" \
+"../../../bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/sim/design_1_rst_clk_wiz_1_100M_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_uartlite_0_0/sim/design_1_axi_uartlite_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/sim/bd_afc3_psr_aclk_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_apb_bridge_0_2/sim/design_1_axi_apb_bridge_0_2.vhd" \
+"../../../bd/design_1/ip/design_1_axi_gpio_0_0/sim/design_1_axi_gpio_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_timer_0_0/sim/design_1_axi_timer_0_0.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/Pong_Pkg.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/Pong_Ball_Ctrl.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/Pong_Paddle_Ctrl.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/Pong_Top2.vhd" \
+"../../../bd/design_1/ipshared/96ad/sim/design_6_Pong_Top2_0_0.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/Sync_To_Count2.vhd" \
+"../../../bd/design_1/ipshared/96ad/sim/design_6_Sync_To_Count2_0_0.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/Sync_To_Count.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/VGA_Sync_Porch.vhd" \
+"../../../bd/design_1/ipshared/96ad/sim/design_6_VGA_Sync_Porch_0_0.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/VGA_Sync_Pulses.vhd" \
+"../../../bd/design_1/ipshared/96ad/sim/design_6_VGA_Sync_Pulses_0_0.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/Debounce_Switch.vhd" \
+"../../../bd/design_1/ipshared/96ad/sim/design_6_Debounce_Switch_3_0.vhd" \
+"../../../bd/design_1/ipshared/96ad/sim/design_6_Debounce_Switch_4_0.vhd" \
+"../../../bd/design_1/ipshared/96ad/sim/design_6_Debounce_Switch_0_0.vhd" \
+"../../../bd/design_1/ipshared/96ad/sim/design_6_Debounce_Switch_2_0.vhd" \
+"../../../bd/design_1/ipshared/96ad/sim/design_6_Debounce_Switch_1_0.vhd" \
+"../../../bd/design_1/ipshared/96ad/sim/design_6.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/design_6_wrapper.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/myip_pong2_slave_lite_v1_0_S00_AXI.vhd" \
+"../../../bd/design_1/ipshared/96ad/src/myip_pong2.vhd" \
+"../../../bd/design_1/ip/design_1_myip_pong2_0_0/sim/design_1_myip_pong2_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_SevenSegmentDecoder_0_0/sim/design_1_SevenSegmentDecoder_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_SevenSegmentDecoder_1_0/sim/design_1_SevenSegmentDecoder_1_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_cdma_0_0/sim/design_1_axi_cdma_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_2/sim/design_1_axi_bram_ctrl_0_2.vhd" \
+"../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_3/sim/design_1_axi_bram_ctrl_0_3.vhd" \
+"../../../bd/design_1/ip/design_1_axi_smc_1_2/bd_0/ip/ip_1/sim/bd_69f9_psr_aclk_0.vhd" \
+"../../../bd/design_1/sim/design_1.vhd" \
+
+# Do not sort compile order
+nosort

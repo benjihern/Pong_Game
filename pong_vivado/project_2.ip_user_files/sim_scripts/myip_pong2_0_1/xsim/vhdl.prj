@@ -1,0 +1,27 @@
+vhdl xil_defaultlib  \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/Pong_Pkg.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/Pong_Ball_Ctrl.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/Pong_Paddle_Ctrl.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/Pong_Top2.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/design_6_Pong_Top2_0_0.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/Sync_To_Count2.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/design_6_Sync_To_Count2_0_0.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/Sync_To_Count.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/VGA_Sync_Porch.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/design_6_VGA_Sync_Porch_0_0.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/VGA_Sync_Pulses.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/design_6_VGA_Sync_Pulses_0_0.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/Debounce_Switch.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/design_6_Debounce_Switch_3_0.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/design_6_Debounce_Switch_4_0.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/design_6_Debounce_Switch_0_0.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/design_6_Debounce_Switch_2_0.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/design_6_Debounce_Switch_1_0.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/design_6.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/design_6_wrapper.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/myip_pong2_slave_lite_v1_0_S00_AXI.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/src/myip_pong2.vhd" \
+"../../../../project_2.gen/sources_1/ip/myip_pong2_0_1/sim/myip_pong2_0.vhd" \
+
+# Do not sort compile order
+nosort

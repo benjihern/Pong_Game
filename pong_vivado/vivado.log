@@ -1,0 +1,1362 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Apr 26 18:58:01 2025
+# Process ID         : 15572
+# Current directory  : C:/Users/benji/AppData/Roaming/Xilinx/Vivado
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent13220
+# Log file           : C:/Users/benji/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file       : C:/Users/benji/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Running On         : bipe_surface_v2
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : Intel(R) Core(TM) i5-1035G7 CPU @ 1.20GHz
+# CPU Frequency      : 1498 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 8155 MB
+# Swap memory        : 8321 MB
+# Total Virtual      : 16477 MB
+# Available Virtual  : 5692 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/alexj/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-5828-Alex_PC/PrjAr/_X_' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.ipdefs/apb_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.ipdefs/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.ipdefs/pong_ip2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [Project 1-5579] Found utility IPs instantiated in one or more block designs which have equivalent inline hdl with improved performance and reduced diskspace. It is recommended to migrate these utility IPs to inline hdl using the command upgrade_project -migrate_to_inline_hdl. The utility IPs may be deprecated in future releases. More information on inline hdl is available in UG994.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1154.070 ; gain = 128.027
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:microblaze_riscv:1.0 - microblaze_riscv_0
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding component instance block -- xilinx.com:ip:mdm_riscv:1.0 - mdm_1
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_1
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:axi_apb_bridge:3.0 - axi_apb_bridge_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:user:apb_led_ctl:1.0 - apb_led_ctl_0
+Adding component instance block -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:user:myip_pong2:1.0 - myip_pong2_0
+Adding component instance block -- xilinx.com:module_ref:SevenSegmentDecoder:1.0 - SevenSegmentDecoder_0
+Adding component instance block -- xilinx.com:module_ref:SevenSegmentDecoder:1.0 - SevenSegmentDecoder_1
+Adding component instance block -- xilinx.com:ip:axi_cdma:4.1 - axi_cdma_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_1
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc_1
+Successfully read diagram <design_1> from block design file <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1207.383 ; gain = 39.594
+ERROR: [Common 17-243] Documentation data file not found.
+startgroup
+set_property -dict [list \
+  CONFIG.C_D_AXI {0} \
+  CONFIG.C_D_LMB {1} \
+  CONFIG.C_I_LMB {1} \
+] [get_bd_cells microblaze_riscv_0]
+delete_bd_objs [get_bd_intf_nets microblaze_riscv_0_M_AXI_DP]
+endgroup
+startgroup
+set_property CONFIG.C_D_AXI {1} [get_bd_cells microblaze_riscv_0]
+endgroup
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects /axi_apb_bridge_0/AXI4_LITE'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects /axi_apb_bridge_0/AXI4_LITE'
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_1/clk_out1 (100 MHz)} Clk_slave {/clk_wiz_1/clk_out1 (100 MHz)} Clk_xbar {/clk_wiz_1/clk_out1 (100 MHz)} Master {/microblaze_riscv_0/M_AXI_DP} Slave {/axi_uartlite_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins microblaze_riscv_0/M_AXI_DP]
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects /axi_apb_bridge_0/AXI4_LITE'
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/myip_pong2_0/s00_axi/reg0' is being assigned into address space '/microblaze_riscv_0/Data' at <0x0004_0000 [ 4K ]>.
+Slave segment '/axi_bram_ctrl_1/S_AXI/Mem0' is being assigned into address space '/microblaze_riscv_0/Data' at <0xC000_0000 [ 8K ]>.
+Slave segment '/apb_led_ctl_0/interface_apb/interface_apb' is being assigned into address space '/microblaze_riscv_0/Data' at <0x44A0_0000 [ 64K ]>.
+Slave segment '/axi_cdma_0/S_AXI_LITE/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x44A1_0000 [ 64K ]>.
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x4000_0000 [ 64K ]>.
+Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x41C0_0000 [ 64K ]>.
+Slave segment '/axi_uartlite_0/S_AXI/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x4060_0000 [ 64K ]>.
+startgroup
+set_property -dict [list \
+  CONFIG.C_D_AXI {1} \
+  CONFIG.C_D_LMB {0} \
+  CONFIG.C_I_LMB {0} \
+] [get_bd_cells microblaze_riscv_0]
+delete_bd_objs [get_bd_intf_nets microblaze_riscv_0_dlmb_1] [get_bd_intf_nets microblaze_riscv_0_ilmb_1]
+endgroup
+delete_bd_objs [get_bd_nets rst_clk_wiz_1_100M_bus_struct_reset] [get_bd_cells microblaze_riscv_0_local_memory]
+startgroup
+set_property CONFIG.C_USE_DCACHE {1} [get_bd_cells microblaze_riscv_0]
+endgroup
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects /axi_apb_bridge_0/AXI4_LITE'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects /axi_apb_bridge_0/AXI4_LITE'
+startgroup
+set_property CONFIG.C_USE_DCACHE {0} [get_bd_cells microblaze_riscv_0]
+endgroup
+startgroup
+set_property CONFIG.C_ENABLE_DISCRETE_PORTS {1} [get_bd_cells microblaze_riscv_0]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.C_ENABLE_DISCRETE_PORTS {0} \
+  CONFIG.C_USE_ICACHE {1} \
+] [get_bd_cells microblaze_riscv_0]
+endgroup
+startgroup
+set_property -dict [list \
+  CONFIG.C_D_AXI {0} \
+  CONFIG.C_M_AXI_D_BUS_EXCEPTION {0} \
+  CONFIG.C_USE_ICACHE {0} \
+] [get_bd_cells microblaze_riscv_0]
+delete_bd_objs [get_bd_intf_nets microblaze_riscv_0_M_AXI_DP]
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_intf_nets microblaze_riscv_0_M_AXI_DP]'
+INFO: [Common 17-17] undo 'set_property -dict [list \
+  CONFIG.C_D_AXI {0} \
+  CONFIG.C_M_AXI_D_BUS_EXCEPTION {0} \
+  CONFIG.C_USE_ICACHE {0} \
+] [get_bd_cells microblaze_riscv_0]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property -dict [list \
+  CONFIG.C_ENABLE_DISCRETE_PORTS {0} \
+  CONFIG.C_USE_ICACHE {1} \
+] [get_bd_cells microblaze_riscv_0]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property CONFIG.C_ENABLE_DISCRETE_PORTS {1} [get_bd_cells microblaze_riscv_0]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property CONFIG.C_USE_DCACHE {0} [get_bd_cells microblaze_riscv_0]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'set_property CONFIG.C_USE_DCACHE {1} [get_bd_cells microblaze_riscv_0]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets rst_clk_wiz_1_100M_bus_struct_reset] [get_bd_cells microblaze_riscv_0_local_memory]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_intf_nets microblaze_riscv_0_dlmb_1] [get_bd_intf_nets microblaze_riscv_0_ilmb_1]'
+INFO: [Common 17-17] undo 'set_property -dict [list \
+  CONFIG.C_D_AXI {1} \
+  CONFIG.C_D_LMB {0} \
+  CONFIG.C_I_LMB {0} \
+] [get_bd_cells microblaze_riscv_0]'
+INFO: [Common 17-17] undo 'startgroup'
+regenerate_bd_layout
+save_bd_design
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp with file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/synth_1/design_1_wrapper.dcp
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+CRITICAL WARNING: [BD 41-1356] Slave segment </microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem> is not assigned into address space </microblaze_riscv_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </axi_bram_ctrl_1/S_AXI/Mem0> is not assigned into address space </microblaze_riscv_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </axi_uartlite_0/S_AXI/Reg> is not assigned into address space </microblaze_riscv_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </axi_timer_0/S_AXI/Reg> is not assigned into address space </microblaze_riscv_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </myip_pong2_0/s00_axi/reg0> is not assigned into address space </microblaze_riscv_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </axi_cdma_0/S_AXI_LITE/Reg> is not assigned into address space </microblaze_riscv_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </axi_gpio_0/S_AXI/Reg> is not assigned into address space </microblaze_riscv_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </apb_led_ctl_0/interface_apb/interface_apb> is not assigned into address space </microblaze_riscv_0/Data>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-1356] Slave segment </microblaze_riscv_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem> is not assigned into address space </microblaze_riscv_0/Instruction>. Please use Address Editor to either assign or exclude it.
+CRITICAL WARNING: [BD 41-2909] Smartconnect block </axi_smc> has no assigned address segments through any of its interfaces and has its contents undefined, which may lead to black-box errors during implementation
+Resolution: Make sure that there is at least one address assigned through this Smartconnect and endpoints are correctly connected to each other
+WARNING: [SMARTCONNECT-2] Port M01_AXI of /axi_smc is connected to an infrastructure IP (/axi_apb_bridge_0).  It is recommended to attach AXI SmartConnect directly to endpoint IPs to avoid mismatches or other issues during validation.  If mismatches occur, manually assign values for AXI Interface properties of /axi_apb_bridge_0.
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /microblaze_riscv_0/Data'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /microblaze_riscv_0/Instruction'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects /microblaze_riscv_0'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects /microblaze_riscv_0'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects /microblaze_riscv_0'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem'
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_object /microblaze_riscv_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem'
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc_1/S00_AXI' to master interface '/axi_smc_1/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_1_2: SmartConnect design_1_axi_smc_1_2 is in High-performance Mode.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </microblaze_riscv_0_local_memory/lmb_bram> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </blk_mem_gen_0> to default.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+WARNING: [xilinx.com:ip:microblaze_riscv:1.0-9] /microblaze_riscv_0: MicroBlaze V needs to have memory mapped to address range 0x00000000 - 0x0000004F. Your processor may function incorrectly without this memory. In most cases this memory would be local memory, connected to the Data and Instruction Local Memory Bus (LMB).
+WARNING: [xilinx.com:ip:axi_apb_bridge:3.0-1] /axi_apb_bridge_0 
+	  ##########################
+	  APB_M Slave is not mapped
+	  ##########################
+WARNING: [xilinx.com:ip:axi_apb_bridge:3.0-17] /axi_apb_bridge_0 
+	  #######################################################################################
+	  No of Slaves selected are 1 out of which 1 are un-mapped/disjoint. 
+	  Please map all the APB interfaces or re-configure the IP to match the number of slaves.
+	  #######################################################################################
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(15) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(15) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0_local_memory/lmb_bram .
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_cdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_1 .
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/bd_0/hw_handoff/design_1_axi_smc_1_2.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/bd_0/synth/design_1_axi_smc_1_2.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_1 .
+INFO: [HWH 41-1378] This design does not contain any "MEMORY" mapped segment for processor microblaze_riscv_0
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_bram_ctrl_0_3
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_cdma_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_smc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_smc_1_2
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_lmb_bram_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_bram_ctrl_0_3
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_cdma_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_1_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_lmb_bram_0
+[Sat Apr 26 19:25:44 2025] Launched design_1_ilmb_bram_if_cntlr_0_synth_1, design_1_axi_smc_0_synth_1, design_1_dlmb_bram_if_cntlr_0_synth_1, design_1_lmb_bram_0_synth_1, design_1_axi_cdma_0_0_synth_1, design_1_axi_bram_ctrl_0_2_synth_1, design_1_blk_mem_gen_0_1_synth_1, design_1_axi_bram_ctrl_0_3_synth_1, design_1_axi_smc_1_2_synth_1, synth_1...
+Run output will be captured here:
+design_1_ilmb_bram_if_cntlr_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_ilmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_axi_smc_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_axi_smc_0_synth_1/runme.log
+design_1_dlmb_bram_if_cntlr_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_lmb_bram_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_lmb_bram_0_synth_1/runme.log
+design_1_axi_cdma_0_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_axi_cdma_0_0_synth_1/runme.log
+design_1_axi_bram_ctrl_0_2_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_axi_bram_ctrl_0_2_synth_1/runme.log
+design_1_blk_mem_gen_0_1_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_blk_mem_gen_0_1_synth_1/runme.log
+design_1_axi_bram_ctrl_0_3_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_axi_bram_ctrl_0_3_synth_1/runme.log
+design_1_axi_smc_1_2_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_axi_smc_1_2_synth_1/runme.log
+synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/synth_1/runme.log
+[Sat Apr 26 19:25:45 2025] Launched impl_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:54 ; elapsed = 00:01:25 . Memory (MB): peak = 1548.410 ; gain = 184.609
+assign_bd_address
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/myip_pong2_0/s00_axi/reg0' is being assigned into address space '/microblaze_riscv_0/Data' at <0x0000_0000 [ 4K ]>.
+Slave segment '/microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem' is being assigned into address space '/microblaze_riscv_0/Data' at <0x0000_2000 [ 8K ]>.
+Slave segment '/microblaze_riscv_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem' is being assigned into address space '/microblaze_riscv_0/Instruction' at <0x0000_2000 [ 8K ]>.
+Slave segment '/axi_bram_ctrl_1/S_AXI/Mem0' is being assigned into address space '/microblaze_riscv_0/Data' at <0xC000_0000 [ 8K ]>.
+Slave segment '/apb_led_ctl_0/interface_apb/interface_apb' is being assigned into address space '/microblaze_riscv_0/Data' at <0x44A0_0000 [ 64K ]>.
+Slave segment '/axi_cdma_0/S_AXI_LITE/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x44A1_0000 [ 64K ]>.
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x4000_0000 [ 64K ]>.
+Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x41C0_0000 [ 64K ]>.
+Slave segment '/axi_uartlite_0/S_AXI/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x4060_0000 [ 64K ]>.
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.245 . Memory (MB): peak = 1726.848 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 292 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1853.824 ; gain = 1.344
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2379.766 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2379.766 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.305 . Memory (MB): peak = 2379.766 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2379.766 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.157 . Memory (MB): peak = 2379.766 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.498 . Memory (MB): peak = 2379.766 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.499 . Memory (MB): peak = 2379.766 ; gain = 0.000
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/data/riscv_bootloop.elf 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2379.766 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 73 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 47 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 24 instances
+
+open_run: Time (s): cpu = 00:00:32 ; elapsed = 00:00:25 . Memory (MB): peak = 2704.793 ; gain = 1151.918
+open_bd_design {C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd}
+generate_target all [get_files  C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [SMARTCONNECT-2] Port M01_AXI of /axi_smc is connected to an infrastructure IP (/axi_apb_bridge_0).  It is recommended to attach AXI SmartConnect directly to endpoint IPs to avoid mismatches or other issues during validation.  If mismatches occur, manually assign values for AXI Interface properties of /axi_apb_bridge_0.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 4K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in Low-Area Mode.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc_1/S00_AXI' to master interface '/axi_smc_1/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_1_2: SmartConnect design_1_axi_smc_1_2 is in High-performance Mode.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-9] /microblaze_riscv_0: Setting C_BASE_VECTORS to 0x00002000.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-23] /microblaze_riscv_0: Setting C_PC_WIDTH to 32.
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0_local_memory/lmb_bram .
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_1 .
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/bd_0/hw_handoff/design_1_axi_smc_1_2.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/bd_0/synth/design_1_axi_smc_1_2.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc_1 .
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2954.602 ; gain = 104.074
+catch { config_ip_cache -export [get_ips -all design_1_microblaze_riscv_0_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_microblaze_riscv_0_0
+catch { config_ip_cache -export [get_ips -all design_1_dlmb_bram_if_cntlr_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_bram_if_cntlr_0
+catch { config_ip_cache -export [get_ips -all design_1_ilmb_bram_if_cntlr_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_bram_if_cntlr_0
+catch { config_ip_cache -export [get_ips -all design_1_lmb_bram_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_lmb_bram_0
+catch { config_ip_cache -export [get_ips -all design_1_axi_smc_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+catch { config_ip_cache -export [get_ips -all design_1_blk_mem_gen_0_1] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_blk_mem_gen_0_1
+catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_0_3] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_bram_ctrl_0_3
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 73a8001007ec7baf to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/7/3/73a8001007ec7baf/design_1_axi_bram_ctrl_0_2.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3/design_1_axi_bram_ctrl_0_3.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3/design_1_axi_bram_ctrl_0_3.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/7/3/73a8001007ec7baf/design_1_axi_bram_ctrl_0_2_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3/design_1_axi_bram_ctrl_0_3_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3/design_1_axi_bram_ctrl_0_3_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/7/3/73a8001007ec7baf/design_1_axi_bram_ctrl_0_2_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3/design_1_axi_bram_ctrl_0_3_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3/design_1_axi_bram_ctrl_0_3_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/7/3/73a8001007ec7baf/design_1_axi_bram_ctrl_0_2_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3/design_1_axi_bram_ctrl_0_3_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3/design_1_axi_bram_ctrl_0_3_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/7/3/73a8001007ec7baf/design_1_axi_bram_ctrl_0_2_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3/design_1_axi_bram_ctrl_0_3_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_3/design_1_axi_bram_ctrl_0_3_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_bram_ctrl_0_3, cache-ID = 73a8001007ec7baf; cache size = 154.780 MB.
+catch { [ delete_ip_run [get_ips -all design_1_axi_bram_ctrl_0_3] ] }
+catch { config_ip_cache -export [get_ips -all design_1_axi_smc_1_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_1_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 495c8cff37541fdf to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/9/495c8cff37541fdf/design_1_axi_smc_1_2.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/design_1_axi_smc_1_2.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/design_1_axi_smc_1_2.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/9/495c8cff37541fdf/design_1_axi_smc_1_2_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/design_1_axi_smc_1_2_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/design_1_axi_smc_1_2_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/9/495c8cff37541fdf/design_1_axi_smc_1_2_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/design_1_axi_smc_1_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/design_1_axi_smc_1_2_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/9/495c8cff37541fdf/design_1_axi_smc_1_2_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/design_1_axi_smc_1_2_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/design_1_axi_smc_1_2_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/9/495c8cff37541fdf/design_1_axi_smc_1_2_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/design_1_axi_smc_1_2_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_1_2/design_1_axi_smc_1_2_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_1_2, cache-ID = 495c8cff37541fdf; cache size = 154.780 MB.
+catch { [ delete_ip_run [get_ips -all design_1_axi_smc_1_2] ] }
+export_ip_user_files -of_objects [get_files C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_axi_smc_0_synth_1 design_1_blk_mem_gen_0_1_synth_1 design_1_dlmb_bram_if_cntlr_0_synth_1 design_1_ilmb_bram_if_cntlr_0_synth_1 design_1_lmb_bram_0_synth_1 design_1_microblaze_riscv_0_0_synth_1 -jobs 4
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_lmb_bram_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_microblaze_riscv_0_0
+[Sat Apr 26 19:49:12 2025] Launched design_1_axi_smc_0_synth_1, design_1_blk_mem_gen_0_1_synth_1, design_1_dlmb_bram_if_cntlr_0_synth_1, design_1_ilmb_bram_if_cntlr_0_synth_1, design_1_lmb_bram_0_synth_1, design_1_microblaze_riscv_0_0_synth_1...
+Run output will be captured here:
+design_1_axi_smc_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_axi_smc_0_synth_1/runme.log
+design_1_blk_mem_gen_0_1_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_blk_mem_gen_0_1_synth_1/runme.log
+design_1_dlmb_bram_if_cntlr_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_ilmb_bram_if_cntlr_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_ilmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_lmb_bram_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_lmb_bram_0_synth_1/runme.log
+design_1_microblaze_riscv_0_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_microblaze_riscv_0_0_synth_1/runme.log
+export_simulation -lib_map_path [list {modelsim=C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/compile_simlib/modelsim} {questa=C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/compile_simlib/questa} {riviera=C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/compile_simlib/riviera} {activehdl=C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/compile_simlib/activehdl}] -of_objects [get_files C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.ip_user_files -ipstatic_source_dir C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+INFO: [Vivado 12-8217] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream/PDI before doing hardware export.
+regenerate_bd_layout
+regenerate_bd_layout
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp with file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/synth_1/design_1_wrapper.dcp
+launch_runs synth_1 -jobs 4
+[Sat Apr 26 20:06:33 2025] Launched synth_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Sat Apr 26 20:07:41 2025] Launched impl_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat Apr 26 20:10:26 2025] Launched impl_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/impl_1/runme.log
+write_hw_platform -fixed -include_bit -force -file C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2024.2/data/embeddedsw) loading 3 seconds
+write_hw_platform: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3108.027 ; gain = 152.637
+delete_bd_objs [get_bd_intf_nets axi_smc_M05_AXI] [get_bd_intf_nets axi_bram_ctrl_1_BRAM_PORTA] [get_bd_cells axi_bram_ctrl_1]
+delete_bd_objs [get_bd_intf_nets axi_cdma_0_M_AXI] [get_bd_intf_nets axi_smc_1_M00_AXI] [get_bd_cells axi_smc_1]
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects /axi_apb_bridge_0/AXI4_LITE'
+startgroup
+set_property CONFIG.NUM_SI {2} [get_bd_cells axi_smc]
+endgroup
+WARNING: [BD 5-699] No address segments matched 'get_bd_addr_segs -of_objects /axi_apb_bridge_0/AXI4_LITE'
+connect_bd_intf_net [get_bd_intf_pins axi_cdma_0/M_AXI] [get_bd_intf_pins axi_smc/S01_AXI]
+regenerate_bd_layout
+startgroup
+set_property CONFIG.SINGLE_PORT_BRAM {0} [get_bd_cells axi_bram_ctrl_0]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTB] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTB]
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0/S_AXI] [get_bd_intf_pins axi_smc/M05_AXI]
+regenerate_bd_layout
+save_bd_design
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+assign_bd_address
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/myip_pong2_0/s00_axi/reg0' is being assigned into address space '/axi_cdma_0/Data' at <0x0000_0000 [ 4K ]>.
+WARNING: [BD 41-1051] Slave segment '/myip_pong2_0/s00_axi/reg0' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /myip_pong2_0/s00_axi/reg0 from address space /axi_cdma_0/Data.
+Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/microblaze_riscv_0/Data' at <0xC000_0000 [ 8K ]>.
+Slave segment '/apb_led_ctl_0/interface_apb/interface_apb' is being assigned into address space '/axi_cdma_0/Data' at <0x44A0_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/apb_led_ctl_0/interface_apb/interface_apb' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Slave segment '/axi_cdma_0/S_AXI_LITE/Reg' is being assigned into address space '/axi_cdma_0/Data' at <0x44A1_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/axi_cdma_0/S_AXI_LITE/Reg' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /axi_cdma_0/S_AXI_LITE/Reg from address space /axi_cdma_0/Data.
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/axi_cdma_0/Data' at <0x4000_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/axi_gpio_0/S_AXI/Reg' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/axi_cdma_0/Data' at <0x41C0_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/axi_timer_0/S_AXI/Reg' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Slave segment '/axi_uartlite_0/S_AXI/Reg' is being assigned into address space '/axi_cdma_0/Data' at <0x4060_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/axi_uartlite_0/S_AXI/Reg' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /axi_uartlite_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+save_bd_design
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp with file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/synth_1/design_1_wrapper.dcp
+reset_run design_1_axi_smc_0_synth_1
+reset_run design_1_axi_bram_ctrl_0_2_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+WARNING: [SMARTCONNECT-2] Port M01_AXI of /axi_smc is connected to an infrastructure IP (/axi_apb_bridge_0).  It is recommended to attach AXI SmartConnect directly to endpoint IPs to avoid mismatches or other issues during validation.  If mismatches occur, manually assign values for AXI Interface properties of /axi_apb_bridge_0.
+INFO: [Common 17-365] Interrupt caught but 'launch_runs' cannot be canceled. Please wait for command to finish.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 4K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-9] /microblaze_riscv_0: Setting C_BASE_VECTORS to 0x00002000.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-23] /microblaze_riscv_0: Setting C_PC_WIDTH to 32.
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1171] User-interrupt detected : Generation halted successfully for IP Integrator design C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd
+INFO: [Common 17-681] Processing pending cancel.
+reset_run design_1_microblaze_riscv_0_0_synth_1
+reset_run design_1_myip_pong2_0_0_synth_1
+reset_run design_1_SevenSegmentDecoder_0_0_synth_1
+reset_run design_1_SevenSegmentDecoder_1_0_synth_1
+reset_run design_1_ilmb_bram_if_cntlr_0_synth_1
+reset_run design_1_dlmb_bram_if_cntlr_0_synth_1
+reset_run design_1_lmb_bram_0_synth_1
+reset_run design_1_axi_cdma_0_0_synth_1
+reset_run design_1_blk_mem_gen_0_1_synth_1
+launch_runs impl_1 -jobs 4
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_apb_led_ctl_0_3
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_apb_bridge_0_2
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_cdma_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_gpio_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_smc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_timer_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_uartlite_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_clk_wiz_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_dlmb_v10_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_ilmb_v10_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_lmb_bram_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_mdm_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_microblaze_riscv_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_myip_pong2_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_rst_clk_wiz_1_100M_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_apb_led_ctl_0_3
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 6f20d3b376e83a8b to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/f/6f20d3b376e83a8b/design_1_apb_led_ctl_0_3.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3/design_1_apb_led_ctl_0_3.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3/design_1_apb_led_ctl_0_3.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/f/6f20d3b376e83a8b/design_1_apb_led_ctl_0_3_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3/design_1_apb_led_ctl_0_3_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3/design_1_apb_led_ctl_0_3_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/f/6f20d3b376e83a8b/design_1_apb_led_ctl_0_3_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3/design_1_apb_led_ctl_0_3_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3/design_1_apb_led_ctl_0_3_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/f/6f20d3b376e83a8b/design_1_apb_led_ctl_0_3_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3/design_1_apb_led_ctl_0_3_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3/design_1_apb_led_ctl_0_3_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/f/6f20d3b376e83a8b/design_1_apb_led_ctl_0_3_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3/design_1_apb_led_ctl_0_3_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_apb_led_ctl_0_3/design_1_apb_led_ctl_0_3_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_apb_led_ctl_0_3, cache-ID = 6f20d3b376e83a8b; cache size = 176.114 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 1c8a39c7538ab511 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/1/c/1c8a39c7538ab511/design_1_ilmb_bram_if_cntlr_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/1/c/1c8a39c7538ab511/design_1_ilmb_bram_if_cntlr_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/1/c/1c8a39c7538ab511/design_1_ilmb_bram_if_cntlr_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/1/c/1c8a39c7538ab511/design_1_ilmb_bram_if_cntlr_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/1/c/1c8a39c7538ab511/design_1_ilmb_bram_if_cntlr_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_ilmb_bram_if_cntlr_0, cache-ID = 1c8a39c7538ab511; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_apb_bridge_0_2
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 3c88007b7f5b05d2 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/3/c/3c88007b7f5b05d2/design_1_axi_apb_bridge_0_2.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2/design_1_axi_apb_bridge_0_2.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2/design_1_axi_apb_bridge_0_2.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/3/c/3c88007b7f5b05d2/design_1_axi_apb_bridge_0_2_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2/design_1_axi_apb_bridge_0_2_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2/design_1_axi_apb_bridge_0_2_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/3/c/3c88007b7f5b05d2/design_1_axi_apb_bridge_0_2_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2/design_1_axi_apb_bridge_0_2_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2/design_1_axi_apb_bridge_0_2_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/3/c/3c88007b7f5b05d2/design_1_axi_apb_bridge_0_2_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2/design_1_axi_apb_bridge_0_2_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2/design_1_axi_apb_bridge_0_2_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/3/c/3c88007b7f5b05d2/design_1_axi_apb_bridge_0_2_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2/design_1_axi_apb_bridge_0_2_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_apb_bridge_0_2/design_1_axi_apb_bridge_0_2_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_apb_bridge_0_2, cache-ID = 3c88007b7f5b05d2; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_lmb_bram_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 45d4d13349e4f071 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/5/45d4d13349e4f071/design_1_lmb_bram_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/5/45d4d13349e4f071/design_1_lmb_bram_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/5/45d4d13349e4f071/design_1_lmb_bram_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/5/45d4d13349e4f071/design_1_lmb_bram_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/5/45d4d13349e4f071/design_1_lmb_bram_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_lmb_bram_0/design_1_lmb_bram_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_lmb_bram_0, cache-ID = 45d4d13349e4f071; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry c6e6e4252c53a96d to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/c/6/c6e6e4252c53a96d/design_1_dlmb_bram_if_cntlr_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/c/6/c6e6e4252c53a96d/design_1_dlmb_bram_if_cntlr_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/c/6/c6e6e4252c53a96d/design_1_dlmb_bram_if_cntlr_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/c/6/c6e6e4252c53a96d/design_1_dlmb_bram_if_cntlr_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/c/6/c6e6e4252c53a96d/design_1_dlmb_bram_if_cntlr_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_bram_if_cntlr_0/design_1_dlmb_bram_if_cntlr_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_dlmb_bram_if_cntlr_0, cache-ID = c6e6e4252c53a96d; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_cdma_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 4a19d861c75c10d7 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/a/4a19d861c75c10d7/design_1_axi_cdma_0_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0/design_1_axi_cdma_0_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0/design_1_axi_cdma_0_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/a/4a19d861c75c10d7/design_1_axi_cdma_0_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0/design_1_axi_cdma_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0/design_1_axi_cdma_0_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/a/4a19d861c75c10d7/design_1_axi_cdma_0_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0/design_1_axi_cdma_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0/design_1_axi_cdma_0_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/a/4a19d861c75c10d7/design_1_axi_cdma_0_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0/design_1_axi_cdma_0_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0/design_1_axi_cdma_0_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/a/4a19d861c75c10d7/design_1_axi_cdma_0_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0/design_1_axi_cdma_0_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_cdma_0_0/design_1_axi_cdma_0_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_cdma_0_0, cache-ID = 4a19d861c75c10d7; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_v10_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 229ef8078c9a9238 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/2/229ef8078c9a9238/design_1_dlmb_v10_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/2/229ef8078c9a9238/design_1_dlmb_v10_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/2/229ef8078c9a9238/design_1_dlmb_v10_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/2/229ef8078c9a9238/design_1_dlmb_v10_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/2/229ef8078c9a9238/design_1_dlmb_v10_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_ilmb_v10_0, cache-ID = 229ef8078c9a9238; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_gpio_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 650f3ebe5335cbc3 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/5/650f3ebe5335cbc3/design_1_axi_gpio_0_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/5/650f3ebe5335cbc3/design_1_axi_gpio_0_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/5/650f3ebe5335cbc3/design_1_axi_gpio_0_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/5/650f3ebe5335cbc3/design_1_axi_gpio_0_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/5/650f3ebe5335cbc3/design_1_axi_gpio_0_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_gpio_0_0, cache-ID = 650f3ebe5335cbc3; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_mdm_1_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 5663d9fe761541e6 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/5/6/5663d9fe761541e6/design_1_mdm_1_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/5/6/5663d9fe761541e6/design_1_mdm_1_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/5/6/5663d9fe761541e6/design_1_mdm_1_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/5/6/5663d9fe761541e6/design_1_mdm_1_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/5/6/5663d9fe761541e6/design_1_mdm_1_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_mdm_1_0, cache-ID = 5663d9fe761541e6; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_clk_wiz_1_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 44be89bb2275fbcb to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/4/44be89bb2275fbcb/design_1_clk_wiz_1_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/4/44be89bb2275fbcb/design_1_clk_wiz_1_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/4/44be89bb2275fbcb/design_1_clk_wiz_1_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/4/44be89bb2275fbcb/design_1_clk_wiz_1_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/4/4/44be89bb2275fbcb/design_1_clk_wiz_1_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_clk_wiz_1_0, cache-ID = 44be89bb2275fbcb; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_timer_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 779ae055e3a009d1 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/7/7/779ae055e3a009d1/design_1_axi_timer_0_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/7/7/779ae055e3a009d1/design_1_axi_timer_0_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/7/7/779ae055e3a009d1/design_1_axi_timer_0_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/7/7/779ae055e3a009d1/design_1_axi_timer_0_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/7/7/779ae055e3a009d1/design_1_axi_timer_0_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_timer_0_0, cache-ID = 779ae055e3a009d1; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_microblaze_riscv_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 981d1a07aff0c8f9 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/9/8/981d1a07aff0c8f9/design_1_microblaze_riscv_0_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/design_1_microblaze_riscv_0_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/design_1_microblaze_riscv_0_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/9/8/981d1a07aff0c8f9/design_1_microblaze_riscv_0_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/design_1_microblaze_riscv_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/design_1_microblaze_riscv_0_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/9/8/981d1a07aff0c8f9/design_1_microblaze_riscv_0_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/design_1_microblaze_riscv_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/design_1_microblaze_riscv_0_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/9/8/981d1a07aff0c8f9/design_1_microblaze_riscv_0_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/design_1_microblaze_riscv_0_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/design_1_microblaze_riscv_0_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/9/8/981d1a07aff0c8f9/design_1_microblaze_riscv_0_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/design_1_microblaze_riscv_0_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_microblaze_riscv_0_0/design_1_microblaze_riscv_0_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_microblaze_riscv_0_0, cache-ID = 981d1a07aff0c8f9; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_uartlite_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry e613bdf11495b561 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/e/6/e613bdf11495b561/design_1_axi_uartlite_0_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/e/6/e613bdf11495b561/design_1_axi_uartlite_0_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/e/6/e613bdf11495b561/design_1_axi_uartlite_0_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/e/6/e613bdf11495b561/design_1_axi_uartlite_0_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/e/6/e613bdf11495b561/design_1_axi_uartlite_0_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_uartlite_0_0/design_1_axi_uartlite_0_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_uartlite_0_0, cache-ID = e613bdf11495b561; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_rst_clk_wiz_1_100M_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 854f8adbc033d449 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/8/5/854f8adbc033d449/design_1_rst_clk_wiz_1_100M_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/8/5/854f8adbc033d449/design_1_rst_clk_wiz_1_100M_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/8/5/854f8adbc033d449/design_1_rst_clk_wiz_1_100M_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/8/5/854f8adbc033d449/design_1_rst_clk_wiz_1_100M_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/8/5/854f8adbc033d449/design_1_rst_clk_wiz_1_100M_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_rst_clk_wiz_1_100M_0, cache-ID = 854f8adbc033d449; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry f770d943df07b288 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/f/7/f770d943df07b288/design_1_blk_mem_gen_0_1.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/f/7/f770d943df07b288/design_1_blk_mem_gen_0_1_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/f/7/f770d943df07b288/design_1_blk_mem_gen_0_1_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/f/7/f770d943df07b288/design_1_blk_mem_gen_0_1_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/f/7/f770d943df07b288/design_1_blk_mem_gen_0_1_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_1/design_1_blk_mem_gen_0_1_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_blk_mem_gen_0_1, cache-ID = f770d943df07b288; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_myip_pong2_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 21a1b2d7c083e13d to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/1/21a1b2d7c083e13d/design_1_myip_pong2_0_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0/design_1_myip_pong2_0_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0/design_1_myip_pong2_0_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/1/21a1b2d7c083e13d/design_1_myip_pong2_0_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0/design_1_myip_pong2_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0/design_1_myip_pong2_0_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/1/21a1b2d7c083e13d/design_1_myip_pong2_0_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0/design_1_myip_pong2_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0/design_1_myip_pong2_0_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/1/21a1b2d7c083e13d/design_1_myip_pong2_0_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0/design_1_myip_pong2_0_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0/design_1_myip_pong2_0_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/1/21a1b2d7c083e13d/design_1_myip_pong2_0_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0/design_1_myip_pong2_0_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_myip_pong2_0_0/design_1_myip_pong2_0_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_myip_pong2_0_0, cache-ID = 21a1b2d7c083e13d; cache size = 176.115 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_v10_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 229ef8078c9a9238 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/2/229ef8078c9a9238/design_1_dlmb_v10_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/2/229ef8078c9a9238/design_1_dlmb_v10_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/2/229ef8078c9a9238/design_1_dlmb_v10_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/2/229ef8078c9a9238/design_1_dlmb_v10_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/2/2/229ef8078c9a9238/design_1_dlmb_v10_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_dlmb_v10_0/design_1_dlmb_v10_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_dlmb_v10_0, cache-ID = 229ef8078c9a9238; cache size = 176.115 MB.
+config_ip_cache: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3152.805 ; gain = 4.227
+[Sat Apr 26 21:11:10 2025] Launched design_1_SevenSegmentDecoder_0_0_synth_1, design_1_SevenSegmentDecoder_1_0_synth_1, design_1_axi_smc_0_synth_1, design_1_axi_bram_ctrl_0_2_synth_1, synth_1...
+Run output will be captured here:
+design_1_SevenSegmentDecoder_0_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_SevenSegmentDecoder_0_0_synth_1/runme.log
+design_1_SevenSegmentDecoder_1_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_SevenSegmentDecoder_1_0_synth_1/runme.log
+design_1_axi_smc_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_axi_smc_0_synth_1/runme.log
+design_1_axi_bram_ctrl_0_2_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_axi_bram_ctrl_0_2_synth_1/runme.log
+synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/synth_1/runme.log
+[Sat Apr 26 21:11:10 2025] Launched impl_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:36 ; elapsed = 00:00:44 . Memory (MB): peak = 3152.805 ; gain = 7.191
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat Apr 26 21:52:25 2025] Launched impl_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/impl_1/runme.log
+write_hw_platform -fixed -include_bit -force -file C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property range 16K [get_bd_addr_segs {microblaze_riscv_0/Data/SEG_dlmb_bram_if_cntlr_Mem}]
+set_property range 16K [get_bd_addr_segs {microblaze_riscv_0/Instruction/SEG_ilmb_bram_if_cntlr_Mem}]
+save_bd_design
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp with file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/synth_1/design_1_wrapper.dcp
+launch_runs impl_1 -jobs 4
+WARNING: [SMARTCONNECT-2] Port M01_AXI of /axi_smc is connected to an infrastructure IP (/axi_apb_bridge_0).  It is recommended to attach AXI SmartConnect directly to endpoint IPs to avoid mismatches or other issues during validation.  If mismatches occur, manually assign values for AXI Interface properties of /axi_apb_bridge_0.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 4K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+xit::source_ipfile: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3198.195 ; gain = 0.000
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+ERROR: [xilinx.com:ip:lmb_bram_if_cntlr:4.0-1] /microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr: Can not generate mask for the LMB peripherals. An address decode mask is assigned to all LMB peripherals connected to the MicroBlaze processor. The address decode mask is based on a set of decode bits that distinguish the LMB address space from the AXI address space. The error message indicates that a set of decode bits can not be found to generate a mask. Please modify the address map of the slaves connected to AXI to use a common address bit.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-9] /microblaze_riscv_0: Setting C_BASE_VECTORS to 0x00002000.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-23] /microblaze_riscv_0: Setting C_PC_WIDTH to 32.
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd 
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_smc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_lmb_bram_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 66a71e04b575a9d9 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = 66a71e04b575a9d9; cache size = 214.169 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_lmb_bram_0
+config_ip_cache: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 3241.246 ; gain = 43.051
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+set_property range 8K [get_bd_addr_segs {microblaze_riscv_0/Instruction/SEG_ilmb_bram_if_cntlr_Mem}]
+set_property range 8K [get_bd_addr_segs {microblaze_riscv_0/Data/SEG_dlmb_bram_if_cntlr_Mem}]
+set_property range 4K [get_bd_addr_segs {microblaze_riscv_0/Instruction/SEG_ilmb_bram_if_cntlr_Mem}]
+set_property range 8K [get_bd_addr_segs {microblaze_riscv_0/Instruction/SEG_ilmb_bram_if_cntlr_Mem}]
+set_property range 16K [get_bd_addr_segs {microblaze_riscv_0/Data/SEG_dlmb_bram_if_cntlr_Mem}]
+set_property range 16K [get_bd_addr_segs {microblaze_riscv_0/Instruction/SEG_ilmb_bram_if_cntlr_Mem}]
+save_bd_design
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+endgroup
+launch_runs synth_1 -jobs 4
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'modmult32(modmult)' found in library 'xil_defaultlib'
+	(Active) Duplicate found at line 42 of file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/P2_axi_urbana2_S2025/P2_axi_urbana2_S2025/vhdl/modmult.vhd
+Duplicate found in file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/Projects_export/P2_Supplements/modmult.vhd
+WARNING: [SMARTCONNECT-2] Port M01_AXI of /axi_smc is connected to an infrastructure IP (/axi_apb_bridge_0).  It is recommended to attach AXI SmartConnect directly to endpoint IPs to avoid mismatches or other issues during validation.  If mismatches occur, manually assign values for AXI Interface properties of /axi_apb_bridge_0.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 4K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+ERROR: [xilinx.com:ip:lmb_bram_if_cntlr:4.0-1] /microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr: Can not generate mask for the LMB peripherals. An address decode mask is assigned to all LMB peripherals connected to the MicroBlaze processor. The address decode mask is based on a set of decode bits that distinguish the LMB address space from the AXI address space. The error message indicates that a set of decode bits can not be found to generate a mask. Please modify the address map of the slaves connected to AXI to use a common address bit.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-9] /microblaze_riscv_0: Setting C_BASE_VECTORS to 0x00002000.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-23] /microblaze_riscv_0: Setting C_PC_WIDTH to 32.
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd 
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_smc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_lmb_bram_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 66a71e04b575a9d9 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = 66a71e04b575a9d9; cache size = 214.169 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_lmb_bram_0
+config_ip_cache: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 3265.090 ; gain = 23.844
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+delete_bd_objs [get_bd_addr_segs] [get_bd_addr_segs -excluded]
+assign_bd_address
+INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm
+Slave segment '/myip_pong2_0/s00_axi/reg0' is being assigned into address space '/axi_cdma_0/Data' at <0x0000_0000 [ 4K ]>.
+WARNING: [BD 41-1051] Slave segment '/myip_pong2_0/s00_axi/reg0' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /myip_pong2_0/s00_axi/reg0 from address space /axi_cdma_0/Data.
+Slave segment '/myip_pong2_0/s00_axi/reg0' is being assigned into address space '/microblaze_riscv_0/Data' at <0x0000_0000 [ 4K ]>.
+Slave segment '/microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr/SLMB/Mem' is being assigned into address space '/microblaze_riscv_0/Data' at <0x0000_2000 [ 8K ]>.
+Slave segment '/microblaze_riscv_0_local_memory/ilmb_bram_if_cntlr/SLMB/Mem' is being assigned into address space '/microblaze_riscv_0/Instruction' at <0x0000_2000 [ 8K ]>.
+Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/axi_cdma_0/Data' at <0xC000_0000 [ 8K ]>.
+Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/microblaze_riscv_0/Data' at <0xC000_0000 [ 8K ]>.
+Slave segment '/apb_led_ctl_0/interface_apb/interface_apb' is being assigned into address space '/axi_cdma_0/Data' at <0x44A0_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/apb_led_ctl_0/interface_apb/interface_apb' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Slave segment '/apb_led_ctl_0/interface_apb/interface_apb' is being assigned into address space '/microblaze_riscv_0/Data' at <0x44A0_0000 [ 64K ]>.
+Slave segment '/axi_cdma_0/S_AXI_LITE/Reg' is being assigned into address space '/axi_cdma_0/Data' at <0x44A1_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/axi_cdma_0/S_AXI_LITE/Reg' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /axi_cdma_0/S_AXI_LITE/Reg from address space /axi_cdma_0/Data.
+Slave segment '/axi_cdma_0/S_AXI_LITE/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x44A1_0000 [ 64K ]>.
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/axi_cdma_0/Data' at <0x4000_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/axi_gpio_0/S_AXI/Reg' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x4000_0000 [ 64K ]>.
+Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/axi_cdma_0/Data' at <0x41C0_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/axi_timer_0/S_AXI/Reg' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Slave segment '/axi_timer_0/S_AXI/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x41C0_0000 [ 64K ]>.
+Slave segment '/axi_uartlite_0/S_AXI/Reg' is being assigned into address space '/axi_cdma_0/Data' at <0x4060_0000 [ 64K ]>.
+WARNING: [BD 41-1051] Slave segment '/axi_uartlite_0/S_AXI/Reg' with 'register' usage does not match address space '/axi_cdma_0/Data' with 'memory' usage so will be excluded from this address space. Please use the 'include_bd_addr_seg' command to override this precaution if required.
+Excluding slave segment /axi_uartlite_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Slave segment '/axi_uartlite_0/S_AXI/Reg' is being assigned into address space '/microblaze_riscv_0/Data' at <0x4060_0000 [ 64K ]>.
+save_bd_design
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+launch_runs synth_1 -jobs 4
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'modmult32(modmult)' found in library 'xil_defaultlib'
+	(Active) Duplicate found at line 42 of file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/P2_axi_urbana2_S2025/P2_axi_urbana2_S2025/vhdl/modmult.vhd
+Duplicate found in file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/Projects_export/P2_Supplements/modmult.vhd
+WARNING: [SMARTCONNECT-2] Port M01_AXI of /axi_smc is connected to an infrastructure IP (/axi_apb_bridge_0).  It is recommended to attach AXI SmartConnect directly to endpoint IPs to avoid mismatches or other issues during validation.  If mismatches occur, manually assign values for AXI Interface properties of /axi_apb_bridge_0.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 4K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-9] /microblaze_riscv_0: Setting C_BASE_VECTORS to 0x00002000.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-23] /microblaze_riscv_0: Setting C_PC_WIDTH to 32.
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 66a71e04b575a9d9 to dir: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0.dcp to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_sim_netlist.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_sim_netlist.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_stub.v to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.cache/ip/2024.2/6/6/66a71e04b575a9d9/design_1_axi_smc_0_stub.vhdl to c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = 66a71e04b575a9d9; cache size = 214.169 MB.
+config_ip_cache: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3265.980 ; gain = 0.891
+[Sat Apr 26 23:01:01 2025] Launched design_1_ilmb_bram_if_cntlr_0_synth_1, design_1_dlmb_bram_if_cntlr_0_synth_1, design_1_lmb_bram_0_synth_1...
+Run output will be captured here:
+design_1_ilmb_bram_if_cntlr_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_ilmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_dlmb_bram_if_cntlr_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_lmb_bram_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_lmb_bram_0_synth_1/runme.log
+[Sat Apr 26 23:01:01 2025] Launched synth_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:51 ; elapsed = 00:00:58 . Memory (MB): peak = 3265.980 ; gain = 0.891
+launch_runs impl_1 -jobs 4
+[Sat Apr 26 23:02:53 2025] Launched impl_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat Apr 26 23:09:44 2025] Launched impl_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/impl_1/runme.log
+write_hw_platform -fixed -include_bit -force -file C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa
+regenerate_bd_layout
+regenerate_bd_layout -routing
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property range 16K [get_bd_addr_segs {microblaze_riscv_0/Data/SEG_dlmb_bram_if_cntlr_Mem}]
+set_property range 16K [get_bd_addr_segs {microblaze_riscv_0/Instruction/SEG_ilmb_bram_if_cntlr_Mem}]
+set_property range 16K [get_bd_addr_segs {axi_cdma_0/Data/SEG_axi_bram_ctrl_0_Mem0}]
+save_bd_design
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout -routing
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp with file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/synth_1/design_1_wrapper.dcp
+launch_runs synth_1 -jobs 4
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'modmult32(modmult)' found in library 'xil_defaultlib'
+	(Active) Duplicate found at line 42 of file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/P2_axi_urbana2_S2025/P2_axi_urbana2_S2025/vhdl/modmult.vhd
+Duplicate found in file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/Projects_export/P2_Supplements/modmult.vhd
+CRITICAL WARNING: [BD 41-1266] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> at <0xC000_0000 [ 8K ]> and slave segment </axi_bram_ctrl_0/S_AXI/Mem0> at <0xC000_0000 [ 16K ]> are mapped into related address spaces </microblaze_riscv_0/Data> and </axi_cdma_0/Data> at different ranges. Please ensure that assignments to related address spaces have the same range.
+WARNING: [SMARTCONNECT-2] Port M01_AXI of /axi_smc is connected to an infrastructure IP (/axi_apb_bridge_0).  It is recommended to attach AXI SmartConnect directly to endpoint IPs to avoid mismatches or other issues during validation.  If mismatches occur, manually assign values for AXI Interface properties of /axi_apb_bridge_0.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 4K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 16K ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+xit::source_ipfile: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 3302.137 ; gain = 0.000
+xit::source_ipfile: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 3302.137 ; gain = 0.000
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+ERROR: [xilinx.com:ip:lmb_bram_if_cntlr:4.0-1] /microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr: Can not generate mask for the LMB peripherals. An address decode mask is assigned to all LMB peripherals connected to the MicroBlaze processor. The address decode mask is based on a set of decode bits that distinguish the LMB address space from the AXI address space. The error message indicates that a set of decode bits can not be found to generate a mask. Please modify the address map of the slaves connected to AXI to use a common address bit.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-9] /microblaze_riscv_0: Setting C_BASE_VECTORS to 0x00002000.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-23] /microblaze_riscv_0: Setting C_PC_WIDTH to 32.
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd 
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_smc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_lmb_bram_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_lmb_bram_0
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+save_bd_design
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+save_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3302.539 ; gain = 0.000
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+launch_runs synth_1 -jobs 4
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'modmult32(modmult)' found in library 'xil_defaultlib'
+	(Active) Duplicate found at line 42 of file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/P2_axi_urbana2_S2025/P2_axi_urbana2_S2025/vhdl/modmult.vhd
+Duplicate found in file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/Projects_export/P2_Supplements/modmult.vhd
+CRITICAL WARNING: [BD 41-1266] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> at <0xC000_0000 [ 8K ]> and slave segment </axi_bram_ctrl_0/S_AXI/Mem0> at <0xC000_0000 [ 16K ]> are mapped into related address spaces </microblaze_riscv_0/Data> and </axi_cdma_0/Data> at different ranges. Please ensure that assignments to related address spaces have the same range.
+WARNING: [SMARTCONNECT-2] Port M01_AXI of /axi_smc is connected to an infrastructure IP (/axi_apb_bridge_0).  It is recommended to attach AXI SmartConnect directly to endpoint IPs to avoid mismatches or other issues during validation.  If mismatches occur, manually assign values for AXI Interface properties of /axi_apb_bridge_0.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 4K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 16K ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+ERROR: [xilinx.com:ip:lmb_bram_if_cntlr:4.0-1] /microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr: Can not generate mask for the LMB peripherals. An address decode mask is assigned to all LMB peripherals connected to the MicroBlaze processor. The address decode mask is based on a set of decode bits that distinguish the LMB address space from the AXI address space. The error message indicates that a set of decode bits can not be found to generate a mask. Please modify the address map of the slaves connected to AXI to use a common address bit.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-9] /microblaze_riscv_0: Setting C_BASE_VECTORS to 0x00002000.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-23] /microblaze_riscv_0: Setting C_PC_WIDTH to 32.
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd 
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_smc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_lmb_bram_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_lmb_bram_0
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+set_property offset 0x42000000 [get_bd_addr_segs {microblaze_riscv_0/Data/SEG_myip_pong2_0_reg0}]
+undo
+INFO: [Common 17-17] undo 'set_property offset 0x42000000 [get_bd_addr_segs {microblaze_riscv_0/Data/SEG_myip_pong2_0_reg0}]'
+save_bd_design
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+save_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3302.941 ; gain = 0.000
+launch_runs synth_1 -jobs 4
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'modmult32(modmult)' found in library 'xil_defaultlib'
+	(Active) Duplicate found at line 42 of file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/P2_axi_urbana2_S2025/P2_axi_urbana2_S2025/vhdl/modmult.vhd
+Duplicate found in file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/Projects_export/P2_Supplements/modmult.vhd
+CRITICAL WARNING: [BD 41-1266] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> at <0xC000_0000 [ 8K ]> and slave segment </axi_bram_ctrl_0/S_AXI/Mem0> at <0xC000_0000 [ 16K ]> are mapped into related address spaces </microblaze_riscv_0/Data> and </axi_cdma_0/Data> at different ranges. Please ensure that assignments to related address spaces have the same range.
+WARNING: [SMARTCONNECT-2] Port M01_AXI of /axi_smc is connected to an infrastructure IP (/axi_apb_bridge_0).  It is recommended to attach AXI SmartConnect directly to endpoint IPs to avoid mismatches or other issues during validation.  If mismatches occur, manually assign values for AXI Interface properties of /axi_apb_bridge_0.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 4K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 16K ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+xit::source_ipfile: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3302.941 ; gain = 0.000
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+ERROR: [xilinx.com:ip:lmb_bram_if_cntlr:4.0-1] /microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr: Can not generate mask for the LMB peripherals. An address decode mask is assigned to all LMB peripherals connected to the MicroBlaze processor. The address decode mask is based on a set of decode bits that distinguish the LMB address space from the AXI address space. The error message indicates that a set of decode bits can not be found to generate a mask. Please modify the address map of the slaves connected to AXI to use a common address bit.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-9] /microblaze_riscv_0: Setting C_BASE_VECTORS to 0x00002000.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-23] /microblaze_riscv_0: Setting C_PC_WIDTH to 32.
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/design_1.bd 
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_smc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_lmb_bram_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_lmb_bram_0
+ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.
+set_property offset 0x42000000 [get_bd_addr_segs {microblaze_riscv_0/Data/SEG_myip_pong2_0_reg0}]
+set_property offset 0x4000 [get_bd_addr_segs {microblaze_riscv_0/Data/SEG_dlmb_bram_if_cntlr_Mem}]
+set_property offset 0x4000 [get_bd_addr_segs {microblaze_riscv_0/Instruction/SEG_ilmb_bram_if_cntlr_Mem}]
+save_bd_design
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+save_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 3302.941 ; gain = 0.000
+launch_runs synth_1 -jobs 4
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'modmult32(modmult)' found in library 'xil_defaultlib'
+	(Active) Duplicate found at line 42 of file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/P2_axi_urbana2_S2025/P2_axi_urbana2_S2025/vhdl/modmult.vhd
+Duplicate found in file C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/imports/Downloads/Projects_export/P2_Supplements/modmult.vhd
+CRITICAL WARNING: [BD 41-1266] Slave segment </axi_bram_ctrl_0/S_AXI/Mem0> at <0xC000_0000 [ 8K ]> and slave segment </axi_bram_ctrl_0/S_AXI/Mem0> at <0xC000_0000 [ 16K ]> are mapped into related address spaces </microblaze_riscv_0/Data> and </axi_cdma_0/Data> at different ranges. Please ensure that assignments to related address spaces have the same range.
+WARNING: [SMARTCONNECT-2] Port M01_AXI of /axi_smc is connected to an infrastructure IP (/axi_apb_bridge_0).  It is recommended to attach AXI SmartConnect directly to endpoint IPs to avoid mismatches or other issues during validation.  If mismatches occur, manually assign values for AXI Interface properties of /axi_apb_bridge_0.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_gpio_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /axi_timer_0/S_AXI/Reg from address space /axi_cdma_0/Data.
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+INFO: [BD 5-943] Reserving offset range <0x4060_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x4200_0000 [ 4K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M03_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x44A1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M04_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 8K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x41C0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M06_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0xC000_0000 [ 16K ]> from slave interface '/axi_smc/S01_AXI' to master interface '/axi_smc/M05_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: SmartConnect design_1_axi_smc_0 is in High-performance Mode.
+xit::source_ipfile: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3302.941 ; gain = 0.000
+Excluding slave segment /apb_led_ctl_0/interface_apb/interface_apb from address space /axi_cdma_0/Data.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+WARNING: [filemgmt 56-443] The ECC Algorithm string is empty. Setting the Memory Map to default ECC value to ECC_NONE.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_1 clk_wiz propagate
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-9] /microblaze_riscv_0: Setting C_BASE_VECTORS to 0x00004000.
+INFO: [xilinx.com:ip:microblaze_riscv:1.0-23] /microblaze_riscv_0: Setting C_PC_WIDTH to 32.
+Wrote  : <C:\Users\benji\Downloads\project_2.xpr\project_2\project_2.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(14) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(14) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.vhd
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(14) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(14) - Only lower order bits will be connected.
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/sim/design_1.vhd
+VHDL Output written to : c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_riscv_0_local_memory/lmb_bram .
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+Exporting to file c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_axi_smc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_lmb_bram_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP design_1_microblaze_riscv_0_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_bram_ctrl_0_2
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_axi_smc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_blk_mem_gen_0_1
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_dlmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_ilmb_bram_if_cntlr_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_microblaze_riscv_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_lmb_bram_0
+[Sun Apr 27 00:36:17 2025] Launched design_1_axi_bram_ctrl_0_2_synth_1, design_1_ilmb_bram_if_cntlr_0_synth_1, design_1_dlmb_bram_if_cntlr_0_synth_1, design_1_lmb_bram_0_synth_1, design_1_axi_smc_0_synth_1, design_1_blk_mem_gen_0_1_synth_1, design_1_microblaze_riscv_0_0_synth_1...
+Run output will be captured here:
+design_1_axi_bram_ctrl_0_2_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_axi_bram_ctrl_0_2_synth_1/runme.log
+design_1_ilmb_bram_if_cntlr_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_ilmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_dlmb_bram_if_cntlr_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_dlmb_bram_if_cntlr_0_synth_1/runme.log
+design_1_lmb_bram_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_lmb_bram_0_synth_1/runme.log
+design_1_axi_smc_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_axi_smc_0_synth_1/runme.log
+design_1_blk_mem_gen_0_1_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_blk_mem_gen_0_1_synth_1/runme.log
+design_1_microblaze_riscv_0_0_synth_1: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/design_1_microblaze_riscv_0_0_synth_1/runme.log
+[Sun Apr 27 00:36:17 2025] Launched synth_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 3320.773 ; gain = 17.832
+launch_runs impl_1 -jobs 4
+[Sun Apr 27 00:51:40 2025] Launched impl_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Apr 27 00:57:48 2025] Launched impl_1...
+Run output will be captured here: C:/Users/benji/Downloads/project_2.xpr/project_2/project_2.runs/impl_1/runme.log
+write_hw_platform -fixed -include_bit -force -file C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/benji/Downloads/project_2.xpr/project_2/design_1_wrapper.xsa
+regenerate_bd_layout
+archive_project C:/Users/benji/Downloads/project_2.xpr/project_2_5.xpr.zip -temp_dir C:/Users/benji/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15572-bipe_surface_v2 -force -include_local_ip_cache
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/benji/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15572-bipe_surface_v2' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.ipdefs/apb_ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.ipdefs/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/benji/Downloads/project_2.xpr/project_2/project_2.ipdefs/pong_ip2'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [Project 1-5579] Found utility IPs instantiated in one or more block designs which have equivalent inline hdl with improved performance and reduced diskspace. It is recommended to migrate these utility IPs to inline hdl using the command upgrade_project -migrate_to_inline_hdl. The utility IPs may be deprecated in future releases. More information on inline hdl is available in UG994.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/benji/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15572-bipe_surface_v2/PrjAr/_X_'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is C:/Users/benji/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15572-bipe_surface_v2/PrjAr/_X_/project_2.cache/ip 
+INFO: [Coretcl 2-1213] Including run results for 'synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'design_1_SevenSegmentDecoder_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'design_1_SevenSegmentDecoder_1_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'design_1_axi_bram_ctrl_0_2_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'design_1_ilmb_bram_if_cntlr_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'design_1_dlmb_bram_if_cntlr_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'design_1_lmb_bram_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'design_1_axi_smc_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'design_1_blk_mem_gen_0_1_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'design_1_microblaze_riscv_0_0_synth_1'
+INFO: [Coretcl 2-1213] Including run results for 'impl_1'
+INFO: [Coretcl 2-133] resetting run 'design_1_SevenSegmentDecoder_0_0_impl_1'...
+INFO: [Coretcl 2-133] resetting run 'design_1_SevenSegmentDecoder_1_0_impl_1'...
+INFO: [Coretcl 2-133] resetting run 'design_1_axi_bram_ctrl_0_2_impl_1'...
+INFO: [Coretcl 2-133] resetting run 'design_1_ilmb_bram_if_cntlr_0_impl_1'...
+INFO: [Coretcl 2-133] resetting run 'design_1_dlmb_bram_if_cntlr_0_impl_1'...
+INFO: [Coretcl 2-133] resetting run 'design_1_lmb_bram_0_impl_1'...
+INFO: [Coretcl 2-133] resetting run 'design_1_axi_smc_0_impl_1'...
+INFO: [Coretcl 2-133] resetting run 'design_1_blk_mem_gen_0_1_impl_1'...
+INFO: [Coretcl 2-133] resetting run 'design_1_microblaze_riscv_0_0_impl_1'...
+INFO: [Coretcl 2-1212] Importing remotely added design sources and verilog include files (if any)...
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_SevenSegmentDecoder_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_SevenSegmentDecoder_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_SevenSegmentDecoder_1_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_SevenSegmentDecoder_1_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_axi_bram_ctrl_0_2'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_axi_bram_ctrl_0_2'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_axi_smc_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_axi_smc_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_blk_mem_gen_0_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_blk_mem_gen_0_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_dlmb_bram_if_cntlr_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_dlmb_bram_if_cntlr_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_ilmb_bram_if_cntlr_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_ilmb_bram_if_cntlr_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_lmb_bram_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_lmb_bram_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'design_1_microblaze_riscv_0_0'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'design_1_microblaze_riscv_0_0'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'utils_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'utils_1'
