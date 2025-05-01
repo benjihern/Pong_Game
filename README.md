@@ -1,80 +1,64 @@
-<h1 align="center">SoC Design Final Project</h1>
+# FPGA-Based Pong with Audio Playback via AXI PWM and CDMA
 
-<!-- ABOUT THE PROJECT -->
-## About the Project
+## Overview
+This project implements a real-time Pong game on an AMD Urbana development board with integrated audio feedback using a custom AXI-based PWM audio system and CDMA. The design combines game logic, video output, scorekeeping, and synchronized audio cues triggered by in-game events. Audio samples are processed and played back using an AXI Timer peripheral controlled via DMA and CPU-mediated register updates.
 
-This project implements a classic Pong game on the AMD Urbana development board with added audio feedback using PWM and CDMA. It integrates video output, paddle control, score display, and synchronized sound playback through a custom AXI-based PWM audio driver.
+<img width="569" alt="image" src="https://github.com/user-attachments/assets/52cdcd7a-2a2f-4e82-9325-62dca4ddf8eb" />
+Figure : AMD Urbana development board layout, highlighting the key interfaces used in the project 
 
-### Game Sequence
-At startup or after a manual reset, the system initializes and plays an introductory song ("Mary Had a Little Lamb"). Once the song finishes, the Pong game begins and continues until a player reaches 9 points. When a player wins, both scores reset to 0, and the game restarts immediately without replaying the introduction. Pressing the reset button at any time will clear the scores and restart the full sequence, including the song.
+## Features
+- Real-time Pong gameplay with paddle control, score display, and automatic game resets
+- Audio playback using 8-bit PWM output, synchronized with game events
+- Use of AXI CDMA to transfer audio sample data from BRAM to a CPU-accessible buffer
+- UART debug logging and GPIO-based paddle control
+- BJT buffer circuit added to support external buzzer drive from FPGA PWM output
 
-<!-- TASK-1 -->
-## Task-1
+## Game Sequence
+At system startup or after a manual reset, an introductory melody is played through the buzzer using PWM. Once the song ends, the Pong game begins and continues until a player reaches 9 points. When a player wins, the scores reset and the game restarts automatically. The reset button restarts the full sequence, including the audio.
 
-In this task, we generate 8-bit audio tables corresponding to different game events in the Pong game. These audio cues enhance the gameplay experience by associating specific sounds with in-game actions:
-- When the player wins or loses, the game plays “Mary Had a Little Lamb”, inspired by the reference link in the Resources section.
-- When the ball hits a paddle, a single 0.25-second tone is played.
-- When a point is scored, another 0.25-second tone is played — distinct from the paddle hit tone.
+## Architecture Overview
+The following system architecture was implemented in Vivado using a block design:
+- MicroBlaze soft processor for game logic and system control
+- AXI Timer IP used for PWM audio waveform generation
+- AXI CDMA for BRAM-to-buffer audio sample transfer
+- AXI GPIO for paddle input and LEDs
+- AXI UART for debug output
+- BRAM used for audio sample storage
+<img width="572" alt="image" src="https://github.com/user-attachments/assets/68779b30-d4af-4d7d-952d-1a241eb9918c" />
+Figure: Vivado block diagram highlighting full system integration
 
-Each sound is exported in three different formats, each serving a different purpose in later tasks:
-- **WAV File**: A standard playable audio file, useful for debugging and verifying sound playback through media players.
-- **Header File**: A C-style array to be used in Task #3 and Task #4. These are integrated into MicroBlaze software for direct playback.
+## Audio System Design
+### Audio Sample Format
+Each sound event is represented by an 8-bit mono waveform sampled at 8 kHz. Sounds include:
+- Game Start / Win Sound: Melody ("Mary Had a Little Lamb")
+- Paddle Hit: Short tone
+- Point Scored: Distinct short tone
+  
+### Playback Pipeline
+- Audio data is stored in BRAM in period/duty cycle pairs
+- AXI CDMA transfers audio samples from BRAM to an intermediate buffer
+- CPU reads from the buffer and writes to AXI Timer registers
+- Delays (via usleep()) are inserted to maintain 8 kHz playback timing
 
-<!-- TASK-2 -->
-## Task-2
+### Hardware Support
+Due to current limitations of the buzzer circuit, a BJT-based amplifier was added between the FPGA and audio output pin to ensure reliable tone reproduction.
+<img width="556" alt="image" src="https://github.com/user-attachments/assets/fd69f2dc-6886-4077-a284-8b8720fa2856" />
+Figure: External BJT driver circuit for audio playback
 
-In this task, we implemented PWM-based audio generation using the AXI Timer IP. This IP was configured to produce a variable-duty-cycle signal that modulates an 8-bit audio waveform and outputs it through the Urbana board's 3.5mm audio jack. Key challenges included signal degradation when driving the buzzer directly from the FPGA, which was solved using a simple BJT-based buffer circuit.
+## Key Implementation Highlights
+- **PWM Audio via AXI Timer**
+  Controlled via TCSR/TLR/TCR registers to modulate 8-bit waveforms at consistent frequency.
+- **DMA-Based Sample Transfer**
+  CDMA offloads data movement between BRAM and buffer to reduce CPU load.
+- **Software-Timed Playback**
+Audio consistency achieved by inserting controlled timing delays between register updates.
+- **Hardware Debugging**
+  UART and XSDB were used for inspecting internal states and diagnosing PWM misconfigurations.
 
-### What We Achieved:
-- Configured the AXI Timer IP registers (TCSR, TLR, TCR) to create accurate PWM signals.
-- Enabled audio feedback playback by routing the PWM output to a buzzer.
-- Verified audio generation using both on-board LEDs and serial UART debug output.
-
-<!-- TASK-3 -->
-## Task-3
-
-In this task, we integrated the Pong game logic with audio feedback to enhance gameplay using event-based sound cues. These cues include paddle hits, point scoring, and winning sounds—all synchronized with in-game logic. We also redesigned the game FSM to ensure clean round transitions and added 7-segment score displays for improved UX.
-
-### What We Achieved:
-- Refactored game FSM to support precise audio triggering.
-- Integrated PWM audio playback directly into Pong events.
-- Resolved hardware issues with a custom audio driver circuit for reliable buzzer output.
-- Extended the game design with score displays and UART debug messages.
-
-### Architecture Overview
-The figure below shows the Vivado block diagram used in this project. It highlights the updated architecture integrating:
-- MicroBlaze soft processor
-- AXI Timer for PWM-based audio output (Task #2)
-- AXI GPIO and UART for paddle and debug control
-- Task #3 additions such as score tracking and sound synchronization logic
-
-<p align="center">
-  <img src="https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/57c73099a9e0b4ae072a84bcc8d5a350384f2c58/diagrams/block_diagram_task3.png"?raw=true" alt="Sublime's custom image"/>
-  Figure 1: Vivado block diagram illustrating the complete system integration for the Pong game. The architecture reflects contributions from both Task #2 and Task #3.
-</p>
-
-<!-- TASK-4 -->
-## Task-4
-
-In Task-4, we enhanced the audio system by integrating the AXI CDMA to transfer PWM parameters—period and duty cycle—from BRAM to a buffer location. This allowed us to offload repetitive data movement from the MicroBlaze processor while still controlling the AXI Timer for PWM audio output.
-
-Since direct CDMA-to-Timer transfers are not supported, we used an indirect method: the CPU reads the CDMA-transferred values from BRAM and writes them to the AXI Timer registers. To match the required 8kHz audio playback rate, we introduced a timed delay (usleep()), preventing the CDMA from updating too quickly and ensuring clean audio output.
-
-This approach meets the project’s requirement of using CDMA to drive audio playback and maintains full Pong game functionality.
-
-### What We Achieved:
-
-- AXI CDMA transfers audio samples from BRAM to buffer
-
-- CPU writes PWM values to the AXI Timer after each transfer
-
-- Playback is rate-limited to ~8kHz for smooth sound
-
-- System satisfies Task-4’s DMA-based audio requirement
-
-<p align="center">
-  <img src="https://github.com/smartsystemslab-uf/final-project-alexillo1/blob/28da4dc464941bbf3153cd4e9dbedd2544061c37/diagrams/task4_diagram.png"?raw=true" alt="Sublime's custom image"/>
-  Figure 2: Vivado block diagram illustrating the complete system integration for the Pong game. The architecture reflects contributions from Task #4.
-</p>
-
-
+## Technologies Used
+- Vivado Design Suite (Block design, IP integration, synthesis)
+- Xilinx MicroBlaze Processor
+- AXI CDMA, GPIO, Timer, UART IPs
+- C for firmware (Xilinx SDK / Vitis)
+- Verilog for hardware testing (optional components)
+- Linux/Windows host tools for waveform generation
